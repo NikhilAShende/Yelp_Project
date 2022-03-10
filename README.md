@@ -7,7 +7,7 @@ and also customers to find best restaurant by looking perforamance and all avail
 
 
 yelp is open source not applying charges to businessess or reviewers 
-but if business want to show adds on yelp for that yelp can charge 
+but if business want to show ads on yelp for that yelp can charge 
 
 Dataset having files :
 
