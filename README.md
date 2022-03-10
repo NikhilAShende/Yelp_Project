@@ -15,6 +15,6 @@ Dataset having files :
 2--  yelp_Review
 3--  yelp_Attribute
 4--  yelp_Hours
-5--  yelp_Checkhin
+5--  yelp_Checkin
 6--  yelp_User
 7--  yelp_Tip
