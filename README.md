@@ -1,5 +1,5 @@
 # Yelp_Project
-Performance & Customer Behaviour Analysis of Restaurant Businesses on Yelp dataset using Hadoop, Spark, Hive on AWS platform with Power 
+#### Performance & Customer Behaviour Analysis of Restaurant Businesses on Yelp dataset using Big Data Technologies like Hadoop, Spark & Hive on AWS with Power BI
 
 ""Yelp is social networking site""
 Where local business register themselves and ask their customer to review about their business on yelp 
