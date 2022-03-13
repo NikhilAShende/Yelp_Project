@@ -5,8 +5,8 @@
 ""Yelp is social networking site""
 Where local business register themselves and ask their customer to review about their business on yelp 
 
-yelp help businessess to understand where they stand in competation
-and also customers to find best restaurant by looking perforamance and all available facilty in business
+yelp help businessess to understand where they stand in competition
+and also helps customers to find best restaurant by looking perforamance and all available facilty in business.
 
 
 yelp is open source not applying charges to businessess or reviewers 
