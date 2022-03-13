@@ -1,0 +1,280 @@
+In total, there are :
+
+5,200,000 user reviews
+Information on 174,000 businesses
+The data spans 11 metropolitan areas
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Yelp_Business:->
+
+1.business_id: Business_id  of the business . all are unqiue. no null values
+
+2.name: 132619 unique values and 174567 are the total rows.name is business name. no null values
+
+3.neighborhood:106552 null values,408 unique values,landmark in a city
+
+4.address:business address , no null values,138564 unique values.
+
+5.city: 1 null value, business is located in perticular city,1093 unique values 
+
+6.state:1 null value,67 unique values. business is located in perticular state
+
+7.postal_code : 623 null values ,16004 unique values, it is showing  postal code of business area
+
+8.latitude: 1 Null value,138432 unique values,it describes loaction coordinates of a perticular business(latitude) 
+
+9.longitude:1 Null value,138844 unique values it describes loaction coordinates of a perticular business(longitude)
+
+10.stars: No null values, 9 unique values, Describes rating of the business 
+
+11.review_count: No null values , 1061 unique values , it shows how many reviews are given by customers on a business
+
+12.is_open : No null values ,2 unique values, if business is open or not.
+
+13.categories: No null values ,76419 unique values, showing which product category are available at perticular business.
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Business_attributes:->
+
+shape --> (152041, 82)
+
+What type of facilities business are providing.
+
+buisness_id: 
+columns:['business_id', 'AcceptsInsurance', 'ByAppointmentOnly',
+       'BusinessAcceptsCreditCards','BusinessParking_garage',
+       'BusinessParking_street','BusinessParking_validated',
+       'BusinessParking_lot', 'BusinessParking_valet',
+       'HairSpecializesIn_coloring', 'HairSpecializesIn_africanamerican',
+       'HairSpecializesIn_curly', 'HairSpecializesIn_perms',
+       'HairSpecializesIn_kids', 'HairSpecializesIn_extensions',
+       'HairSpecializesIn_asian', 'HairSpecializesIn_straightperms',
+       'RestaurantsPriceRange2', 'GoodForKids', 'WheelchairAccessible',
+       'BikeParking', 'Alcohol', 'HasTV', 'NoiseLevel', 'RestaurantsAttire',
+       'Music_dj', 'Music_background_music', 'Music_no_music', 'Music_karaoke',
+       'Music_live', 'Music_video', 'Music_jukebox', 'Ambience_romantic',
+       'Ambience_intimate', 'Ambience_classy', 'Ambience_hipster',
+       'Ambience_divey', 'Ambience_touristy', 'Ambience_trendy',
+       'Ambience_upscale', 'Ambience_casual', 'RestaurantsGoodForGroups',
+       'Caters', 'WiFi', 'RestaurantsReservations', 'RestaurantsTakeOut',
+       'HappyHour', 'GoodForDancing', 'RestaurantsTableService',
+       'OutdoorSeating', 'RestaurantsDelivery', 'BestNights_monday',
+       'BestNights_tuesday', 'BestNights_friday', 'BestNights_wednesday',
+       'BestNights_thursday', 'BestNights_sunday', 'BestNights_saturday',
+       'GoodForMeal_dessert', 'GoodForMeal_latenight', 'GoodForMeal_lunch',
+       'GoodForMeal_dinner', 'GoodForMeal_breakfast', 'GoodForMeal_brunch',
+       'CoatCheck', 'Smoking', 'DriveThru', 'DogsAllowed',
+       'BusinessAcceptsBitcoin', 'Open24Hours', 'BYOBCorkage', 'BYOB',
+       'Corkage', 'DietaryRestrictions_dairy-free',
+       'DietaryRestrictions_gluten-free', 'DietaryRestrictions_vegan',
+       'DietaryRestrictions_kosher', 'DietaryRestrictions_halal',
+       'DietaryRestrictions_soy-free', 'DietaryRestrictions_vegetarian',
+       'AgesAllowed', 'RestaurantsCounterService']
+drop:  
+'DietaryRestrictions_kosher', 'DietaryRestrictions_halal','DietaryRestrictions_soy-free',
+'DietaryRestrictions_vegetarian','RestaurantsCounterService','DietaryRestrictions_gluten-free',
+ DietaryRestrictions_dairy-free','DietaryRestrictions_vegan', 'BYOBCorkage', 'BYOB','CoatCheck',
+'Ambience_hipster','Ambience_divey','Ambience_intimate','Ambience_trendy','Ambience_upscale',
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Business_hours:->
+
+shape --> (174567, 8)
+
+at what time business shops are open or closed. 
+
+columns:[business_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday]
+No null values
+
+business_id    174567
+monday           1396
+tuesday          1402
+wednesday        1407
+thursday         1443
+friday           1513
+saturday         1444
+sunday           1291
+
+
+----------------------------------------------------------------------------------
+
+
+business_checkin:-> 
+
+shape --> (3911218,4)
+
+for perticular business at perticular day at perticular hour how many people did checkin
+--Checkins by day
+   Use the distribution of checkin to gain a better understanding of when the customers are visiting. 
+   Consider expanding capacity during high volume hours or cutting back when business is slow.
+--Checkins by Hour
+   Identify the most busiest times of the business during the day.
+columns:
+1.business_id,
+2.weekday:in which day their is most check ins happen in perticular business
+3.hour:At what time hours how  many checks ins happend for perticular business
+4.checkins: On perticular day, at perticular time hour how many 
+5.checkins happend for perticular business
+
+-No null values in all columns
+
+business_id: 146350 unique values 
+counts:->
+weekday:
+Sat    653551
+Fri    584790
+Sun    567181
+Thu    545489
+Wed    537730
+Tue    522104
+Mon    500373
+
+hour: At what time hours how  many checks ins happend for perticular business
+
+23:00    284353
+22:00    283879
+19:00    277109
+21:00    275569
+18:00    275389
+0:00     273294
+20:00    270888
+17:00    251077
+1:00     242291
+16:00    219672
+2:00     202336
+15:00    167476
+3:00     162641
+4:00     123865
+14:00    120330
+5:00      87814
+13:00     87247
+6:00      61658
+12:00     60353
+7:00      48321
+11:00     40442
+8:00      36982
+9:00      29144
+10:00     29088
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+Business_tip:->
+
+shape --> (1098324, 5)
+
+columns:[text,date,likes,business_id,user_id]
+
+1.text: 2 Null values, tip given by perticular user to business
+
+2.date: on which date perticular user have given tip to perticular business
+
+3.likes: NO null values, 13 unique values, how many people like the tip given by user
+
+4.business_id: business id of the business
+
+5.user_id: user_id of the user 
+
+--------------------------------------------------------------------------------------------------------------------
+
+(18 + 497 + 108 + )
+
+(40 + 108 + 2 + 18 + 497 = 673)  pyspark null values
+
+friends = none-> 566093 , str.contain(None) --> 566114
+
+elite null are correct  1265282
+
+business_user:(1326100, 22)
+
+columns:(['user_id', 'name', 'review_count', 'yelping_since', 'friends', 'useful',
+       'funny', 'cool', 'fans', 'elite', 'average_stars', 'compliment_hot',
+       'compliment_more', 'compliment_profile', 'compliment_cute',
+       'compliment_list', 'compliment_note', 'compliment_plain',
+       'compliment_cool', 'compliment_funny', 'compliment_writer',
+       'compliment_photos'])
+
+1.user_id: no null values, user id of the user.
+
+2.name: 497 null values.
+
+3.review_count:perticular user has given how many reviews on yelp website
+
+4.yelping_since: on which date user has registered on yelp website
+
+5.friends: user is coming with which user_friend that user_friend id is given
+
+6.useful: how many useful review yelp has gain
+
+7.funny: how many funny review yelp has gain
+
+8.cool:how many cool review yelp has gain
+
+9.elite:
+In order to be considered a Yelp “Elite,” a subgroup launched in 2005, users must be recognized by the Yelp mothership for “well-written reviews, high quality tips, a detailed personal profile, an active voting and complimenting record, and a history of playing well with others.
+
+elite values are shown as years means for how many years that user was elite member.
+elite user is also that person whoe writes 40 good reviews in a year
+
+According to Yelp, elite users are real people who have thoughtful and well-written Yelp reviews coupled with high-quality photos.
+These users are characterized by their detailed personal profile and a history of friendly interactions with other users. These users are invited to exclusive events, such as a local tea shop grand opening. Any Yelp user can nominate themselves or have someone else nominate them to apply as an elite member. The Yelp Elite Squad (YES!) is a yearly program, so elite status is updated at the end of the year.
+Read more about the YES! program and elite users.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Review:->
+
+ #   Column       Dtype 
+---  ------       ----- 
+ 0   review_id    object
+ 1   user_id      object
+ 2   business_id  object
+ 3   stars        int64 
+ 4   date         object
+ 5   text         object
+ 6   useful       int64 
+ 7   funny        int64 
+ 8   cool         int64 
+
+their is no null in the data 
+review id is unique no repaeated value
+
+- new distinct review id is generated whether user is same or different
+
+- user id shows user identity 
+
+- business id shows the business on which user's has make their review
+
+- review column have value from -1 to 3364
+
+- funny column have value from 0 to 1481
+
+- cool column have value from -1 to 1105
+
+- stars column show rating given by user on business_id
+
+- text column show review given by user in text form
+
+- useful column show how many user feels that review is useful for them 
+
+- date column show on what date user has done 
+
+- '2004-07-22' to '2017-12-11'
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+
+
+
+
